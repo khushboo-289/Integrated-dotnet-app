@@ -12,6 +12,10 @@ pipeline {
                 git branch: 'master', url: 'https://github.com/khushboo-289/Integrated-dotnet-app.git'
             }
         }
+        stage('Test Terraform') {
+            steps {
+                bat 'terraform --version'
+        }
         stage("terraform setup"){
             steps {
                bat 'terraform init'
