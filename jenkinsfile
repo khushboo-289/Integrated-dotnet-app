@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Test Terraform') {
             steps {
-                  dir('terraform') {
+                  dir('terraform323') {
                       bat 'terraform --version'
                    }
             }
@@ -22,7 +22,7 @@ pipeline {
            
         stage("terraform setup"){
             steps {
-               dir("terraform"){
+               dir("terraform323"){
                    bat 'terraform init'
                    bat 'terraform plan -out=tfplan'
                    bat 'terraform apply -auto-approve tfplan'
