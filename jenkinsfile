@@ -14,15 +14,19 @@ pipeline {
         }
         stage('Test Terraform') {
             steps {
-                bat 'terraform --version'
+                  dir('terraform') {
+                      bat 'terraform --version'
+                   }
             }
         }
            
         stage("terraform setup"){
             steps {
-               bat 'terraform init'
-               bat 'terraform plan -out=tfplan'
-               bat 'terraform apply -auto-approve tfplan'
+               dir("terraform"){
+                   bat 'terraform init'
+                   bat 'terraform plan -out=tfplan'
+                   bat 'terraform apply -auto-approve tfplan'
+               }
 
             }
         }
