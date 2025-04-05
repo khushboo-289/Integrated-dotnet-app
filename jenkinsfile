@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'master', url: 'https://github.com/khushboo-289/web-application.git'
+                git branch: 'master', url: 'https://github.com/khushboo-289/Integrated-dotnet-app.git'
             }
         }
         stages("terraform setup"){
