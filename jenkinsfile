@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        AZURE_CREDENTIALS_ID = 'azure-service-principal'
+        AZURE_CREDENTIALS_ID = 'azure-new-service-principal'
         RESOURCE_GROUP = 'rg-integrated-terraform'
         APP_SERVICE_NAME = 'webapijenkins56373'
     }
