@@ -15,7 +15,9 @@ pipeline {
         stage('Test Terraform') {
             steps {
                 bat 'terraform --version'
+            }
         }
+           
         stage("terraform setup"){
             steps {
                bat 'terraform init'
