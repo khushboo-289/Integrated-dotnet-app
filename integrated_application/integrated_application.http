@@ -1,0 +1,6 @@
+@integrated_application_HostAddress = http://localhost:5232
+
+GET {{integrated_application_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
